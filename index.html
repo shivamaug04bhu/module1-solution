@@ -1,0 +1,25 @@
+<html ng-app="LunchCheck">
+    <head>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    
+    <body>
+
+        <h1> Assignment 1</h1>
+        <div ng-controller="LunchCheckController">
+            <div>
+                <input style="border-color: {{borderColor}};" 
+                    type="text" 
+                    ng-model="message"
+                    placeholder="Enter items here"
+                    ><br> <!--I am not considering an empty item, i.e., `, ,` as an item towards to the count.-->
+                <p style="color: red;" data-ng-show="noMessage">Please enter data first</p>
+                <p style="color: 29ff08;" data-ng-show="Message1">Too much!</p>
+                <p style="color: 29ff08;" data-ng-show="Message2">Enjoy!</p>
+            </div><br><br>
+            <button data-ng-click="checkStatus()">Check If Too Much</button><br><br>
+        </div>
+
+    </body>
+</html>
